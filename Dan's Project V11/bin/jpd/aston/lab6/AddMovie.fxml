@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="addVideo" alignment="CENTER" prefHeight="338.0" prefWidth="230.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="328.0" prefWidth="230.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label layoutX="12.0" layoutY="19.0" text="Title:" textFill="WHITE" />
+            <Label layoutX="8.0" layoutY="49.0" text="Director:" textFill="WHITE" />
+            <TextField fx:id="titleField" layoutX="66.0" layoutY="15.0" promptText="Title" />
+            <TextField fx:id="directorField" layoutX="66.0" layoutY="45.0" promptText="Director" />
+            <Label layoutX="7.0" layoutY="80.0" text="Playtime:" textFill="WHITE" />
+            <Slider fx:id="playtimeSlider" layoutX="19.0" layoutY="109.0" majorTickUnit="60.0" max="240.0" minorTickCount="5" prefHeight="14.0" prefWidth="201.0" showTickLabels="true" showTickMarks="true" />
+            <Label fx:id="playtimeLabel" layoutX="78.0" layoutY="80.0" prefHeight="17.0" prefWidth="111.0" textFill="WHITE" />
+            <Label layoutX="14.0" layoutY="264.0" text="Comment:" textFill="WHITE" />
+            <TextField fx:id="commentField" layoutX="72.0" layoutY="260.0" prefHeight="25.0" prefWidth="149.0" promptText="Comment" />
+            <Label layoutX="7.0" layoutY="139.0" text="Rating:" textFill="WHITE" />
+            <RadioButton fx:id="zeroBtn" layoutX="9.0" layoutY="165.0" mnemonicParsing="false" text="0" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="RatingGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="oneBtn" layoutX="41.0" layoutY="165.0" mnemonicParsing="false" text="1" textFill="WHITE" toggleGroup="$RatingGroup" />
+            <RadioButton fx:id="twoBtn" layoutX="72.0" layoutY="165.0" mnemonicParsing="false" text="2" textFill="WHITE" toggleGroup="$RatingGroup" />
+            <RadioButton fx:id="threeBtn" layoutX="107.0" layoutY="165.0" mnemonicParsing="false" text="3" textFill="WHITE" toggleGroup="$RatingGroup" />
+            <RadioButton fx:id="fourBtn" layoutX="140.0" layoutY="165.0" mnemonicParsing="false" text="4" textFill="WHITE" toggleGroup="$RatingGroup" />
+            <RadioButton fx:id="fiveBtn" layoutX="173.0" layoutY="165.0" mnemonicParsing="false" text="5" textFill="WHITE" toggleGroup="$RatingGroup" />
+            <Label layoutX="16.0" layoutY="194.0" text="Genre:" textFill="WHITE" />
+            <Label layoutX="21.0" layoutY="231.0" text="Year:" textFill="WHITE" />
+            <TextField fx:id="genreField" layoutX="72.0" layoutY="190.0" promptText="Genre" />
+            <TextField fx:id="yearField" layoutX="72.0" layoutY="227.0" promptText="Year" />
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="230.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button mnemonicParsing="false" onAction="#createPressed" style="-fx-background-color: Gold;" text="Create" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#cancelledPressed" style="-fx-background-color: Gold;" text="Cancel" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

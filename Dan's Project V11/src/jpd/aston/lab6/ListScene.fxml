@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="421.0" spacing="5.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="395.0" style="-fx-background-color: Black;" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="searchTextField" onAction="#searchTextPressed" prefHeight="25.0" prefWidth="244.0" promptText="Search Database" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin></TextField>
+            <Button mnemonicParsing="false" onAction="#searchPressed" style="-fx-background-color: Gold;" text="Search" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="25.0" prefWidth="238.0">
+         <children>
+            <Label text="Number of movies in database: " textFill="WHITE" wrapText="true" />
+            <Label fx:id="NoMovies" text=" " textFill="WHITE" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="212.0" prefWidth="329.0" style="-fx-background-color: Black;" VBox.vgrow="ALWAYS">
+         <children>
+            <ListView fx:id="listItems" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#listItemsClicked" prefHeight="209.0" prefWidth="191.0" style="-fx-background-color: Gold;" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" style="-fx-background-color: Black;" VBox.vgrow="ALWAYS">
+         <children>
+            <Button mnemonicParsing="false" onAction="#shufflePressed" style="-fx-background-color: Gold;" text="Shuffle" textFill="WHITE" />
+            <MenuButton mnemonicParsing="false" style="-fx-background-color: Gold;" text="Add" textFill="WHITE">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#addPressed" text="Add" />
+                <MenuItem mnemonicParsing="false" onAction="#openPressed" text="Open" />
+              </items>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" style="-fx-background-color: Gold;" text="Sort" textFill="WHITE">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#sortByRating" text="Sort By Rating" />
+                <MenuItem mnemonicParsing="false" onAction="#sortByTitle" text="Sort By Title" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortByDirector" text="Sort By Director" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortByGenre" text="Sort By Genre" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortByYear" text="Sort By Year" />
+              </items>
+            </MenuButton>
+            <Button mnemonicParsing="false" onAction="#quitPressed" style="-fx-background-color: Gold;" text="Close" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

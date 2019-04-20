@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: Black;">
+         <children>
+            <Button layoutX="14.0" layoutY="139.0" mnemonicParsing="false" onAction="#extraPressed" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: Lime;" text="Extra" textFill="WHITE" />
+            <Button layoutX="124.0" layoutY="139.0" mnemonicParsing="false" onAction="#removePressed" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: Red;" text="Remove" textFill="WHITE" />
+            <Label alignment="CENTER" contentDisplay="TOP" layoutX="11.0" layoutY="-1.0" prefHeight="67.0" prefWidth="178.0" text="Choose to view extra information, edit or remove the following film..." textFill="WHITE" wrapText="true" />
+            <Button layoutX="74.0" layoutY="139.0" mnemonicParsing="false" onAction="#editPressed" prefHeight="25.0" prefWidth="48.0" style="-fx-background-color: Gold;" text="Edit" textFill="WHITE" />
+            <Label fx:id="lblItem" layoutX="9.0" layoutY="57.0" prefHeight="67.0" prefWidth="178.0" textFill="WHITE" wrapText="true" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
