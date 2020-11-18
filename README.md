@@ -1,2 +1,2 @@
 # MovieDB
-Personal MovieDB in Java
+Personal Movie Database created in Java and JavaFX Scene Builder
